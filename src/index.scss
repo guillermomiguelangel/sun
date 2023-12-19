@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin bgResponsive ($urlFolder: "", $nameImg: "", $extension: false, $oneImage: false) {
+    @if $oneImage {
+        background-image: url(#{$urlFolder}#{$nameImg}.#{$extension} );
+    }
+
+    @else {
+        background-image: url(#{$urlFolder}#{$nameImg}.#{$extension} );
+        background-image: -webkit-image-set(url(#{$urlFolder}#{$nameImg}.#{$extension} ) 1x,
+            url(#{$urlFolder}#{$nameImg}@2x.#{$extension} ) 2x);
+        background-image: image-set(url(#{$urlFolder}#{$nameImg}.#{$extension} ) 1x,
+            url(#{$urlFolder}#{$nameImg}@2x.#{$extension} ) 2x)
+    }
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: normal;
+    font-weight: 400;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, .66);
+}
+
+input,
+select {
+    background-color: transparent;
+    border-bottom: 0.0625rem solid white;
+    height: 2.125rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+}
+
+input::-ms-input-placeholder {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track:hover {
+    background: #00000020;
+    cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00000030;
+    cursor: pointer;
+}
+
+button {
+    height: 3rem;
+    width: 10.6rem;
+    font-family: 'Red Hat Display';
+    background-color: white;
+    border-radius: .5rem;
+    color: #F88430;
+    font-size: 1rem;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+
+    &:hover {
+        border: none !important;
+        background-color: #F88430;
+        color: white;
+        transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+    }
+
+    &:focus {
+        border: none;
+        outline: none !important;
+    }
+}
+
+.gradient-slider {
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 50%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: .6;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &:after {
+        content: "";
+        opacity: .6;
+        position: absolute;
+        display: block;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3e%3cpath d='M1 0.999999L7 7L13 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    background-position: calc(100% - 1rem) 50%;
+    background-repeat: no-repeat;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.bg-startpage {
+    &:after {
+        content: "";
+        display: block;
+        background-image: url(assets/bg_waves.jpg);
+        background-size: cover;
+        position: absolute;
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    background: linear-gradient(180deg, #0090C8 0%, #FFF1E6 130%);
+}
+
+.bg-welcome {
+    background-image: url(assets/bg_wave.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bgSandBall {
+    --animate-duration: 2s;
+    height: 152px;
+    background: url('assets/img_ball.png'), url('assets/bg_sand.png');
+    background-size: 117px, auto 92px;
+    background-repeat: no-repeat, repeat-x;
+    background-position: bottom right;
+}
+
+.blueLayout {
+    &:before {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #0090C8;
+        background-blend-mode: multiply;
+        background-image: url(assets/bg_waves-recipes.png);
+        background-size: cover;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, #0090C8 0%, #FFF1E6 100%);
+    }
+}
+
+nav {
+    .active {
+        font-weight: 700;
+        color: black;
+    }
+
+    .menu {
+        background-image: url(assets/bg_palm-menu.svg);
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bgSandBall {
+        --animate-duration: 1s;
+        height: 232px;
+        background: url('assets/img_ball.png'), url('assets/bg_sand.png');
+        background-size: 229px, auto 92px;
+        background-repeat: no-repeat, repeat-x;
+        background-position: right top, bottom;
+    }
+
+    button {
+        &:hover {
+            background-color: white;
+            color: #F88430;
+        }
+    }
+}
