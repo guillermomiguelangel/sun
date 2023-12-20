@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-full-height": "^1.2.3",
     "react-router-dom": "^6.21.0",
-    "react-use": "^17.4.2"
+    "react-use": "^17.4.2",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

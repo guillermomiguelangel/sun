@@ -1,4 +1,4 @@
-import { useMediaSun } from '@/hooks/useMediaSun';
+import { useMediaSun } from '../hooks/useMediaSun';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ export const FormStep3 = () => {
             <NavLink to="/recipes"><button className='button w-full lg:w-52'>DESCUBRIR RECETAS</button></NavLink>
           </div>
         </div>
-        <div className='animate__animated animate__fadeInUp bgSandBall pt-3 lg:absolute lg:left-0 lg:right-0 lg:bottom-0'>
+        <div className='pointer-events-none animate__animated animate__fadeInUp bgSandBall pt-3 lg:absolute lg:left-0 lg:right-0 lg:bottom-0'>
           <figure></figure>
         </div>
       </div>

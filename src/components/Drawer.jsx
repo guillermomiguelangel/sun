@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { Sound } from './Sound'
 import { Link, NavLink } from 'react-router-dom'
 import cn from 'classnames'

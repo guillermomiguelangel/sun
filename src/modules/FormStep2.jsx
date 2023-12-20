@@ -1,6 +1,6 @@
-import { useMediaSun } from '@/hooks/useMediaSun';
+import { useMediaSun } from '../hooks/useMediaSun';
 import React from 'react';
-import imgSandals from '@/assets/img_sandals.png';
+import imgSandals from '../assets/img_sandals.png';
 import { useFormik } from 'formik';
 import FullHeight from "react-full-height";
 

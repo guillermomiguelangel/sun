@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { BlueLayout } from '@/layout/BlueLayout';
-import { useMediaSun } from '@/hooks/useMediaSun';
+import { BlueLayout } from '../layout/BlueLayout';
+import { useMediaSun } from '../hooks/useMediaSun';
 import { useRef, useState } from 'react';
 
 export const RecipesPage = () => {
@@ -16,93 +16,93 @@ export const RecipesPage = () => {
   const dataRecipes = [
     {
       title: 'Bramble',
-      icon: 'assets/ic_beefeater.png',
-      thumb: 'assets/img_thumb-1.jpg',
-      url: 'assets/img_recipes-1.jpg',
+      icon: '../assets/ic_beefeater.png',
+      thumb: '../assets/img_thumb-1.jpg',
+      url: '../assets/img_recipes-1.jpg',
       description: '60 ml Gin Beefeater, 20 ml jarabe de goma, 20 ml jugo de limón, 10 ml mermelada de mora, Cristalería: Copa balón'
     },
     {
       title: 'Pink tonic',
-      icon: 'assets/ic_beefeater.png',
-      thumb: 'assets/img_thumb-2.jpg',
-      url: 'assets/img_recipes-2.jpg',
+      icon: '../assets/ic_beefeater.png',
+      thumb: '../assets/img_thumb-2.jpg',
+      url: '../assets/img_recipes-2.jpg',
       description: '1/3 de Beefeater Pink, 2/3 Agua tónica, Decoración: frutilla, Cristalería: Copa balón'
     },
     {
       title: 'Rosato Tonic ',
-      icon: 'assets/ic_ramazzotti.png',
-      thumb: 'assets/img_thumb-3.jpg',
-      url: 'assets/img_recipes-3.jpg',
+      icon: '../assets/ic_ramazzotti.png',
+      thumb: '../assets/img_thumb-3.jpg',
+      url: '../assets/img_recipes-3.jpg',
       description: '1/3 de aperitivo Rosato, 2/3 de Agua tónica, Decoración: rodajas de limón, Cristalería: Copa'
     },
     {
       title: 'Violetto Tonic',
-      icon: 'assets/ic_ramazzotti.png',
-      thumb: 'assets/img_thumb-4.jpg',
-      url: 'assets/img_recipes-4.jpg',
+      icon: '../assets/ic_ramazzotti.png',
+      thumb: '../assets/img_thumb-4.jpg',
+      url: '../assets/img_recipes-4.jpg',
       description: '1/3 de aperitivo Violetto, 2/3 Agua tónica, Decoración: Arándanos y ramita de Romero, Cristalería: Copa'
     },
     {
       title: 'Moscow mule',
-      icon: 'assets/ic_absolut.png',
-      thumb: 'assets/img_thumb-5.jpg',
-      url: 'assets/img_recipes-5.jpg',
+      icon: '../assets/ic_absolut.png',
+      thumb: '../assets/img_thumb-5.jpg',
+      url: '../assets/img_recipes-5.jpg',
       description: '45 ml Absolut vodka (Elyx u original), 15 ml jugo de limón, 150 ml ginger beer, Decoración: drop de limón y lámina de jengibre'
     },
     {
       title: 'Piña Colada',
-      icon: 'assets/ic_malibu.png',
-      thumb: 'assets/img_thumb-6.jpg',
-      url: 'assets/img_recipes-6.jpg',
+      icon: '../assets/ic_malibu.png',
+      thumb: '../assets/img_thumb-6.jpg',
+      url: '../assets/img_recipes-6.jpg',
       description: '50 ml Malibú, 75 ml Jugo de Piña, 25 ml de crema de coco, Técnica: batir en coctelera con hielo, Decoración: Trozo de piña., Cristalería: vaso largo'
     },
     {
       title: 'Ballantine\'s Wild Tonic',
-      icon: 'assets/ic_ballan.png',
-      thumb: 'assets/img_thumb-7.jpg',
-      url: 'assets/img_recipes-7.jpg',
+      icon: '../assets/ic_ballan.png',
+      thumb: '../assets/img_thumb-7.jpg',
+      url: '../assets/img_recipes-7.jpg',
       description: '1/3 de Ballantine\'s Wild, 2/3 de Agua tónica, Hielo, Decoración: rodaja de limón sutil, Cristalería: vaso largo'
     },
     {
       title: 'Mojito',
-      icon: 'assets/ic_havana.png',
-      thumb: 'assets/img_thumb-8.jpg',
-      url: 'assets/img_recipes-8.jpg',
+      icon: '../assets/ic_havana.png',
+      thumb: '../assets/img_thumb-8.jpg',
+      url: '../assets/img_recipes-8.jpg',
       description: '45 ml Havana Club 3 años, 20 ml jarabe de goma, 30 ml jugo de limón, Macerar hojas de menta con la goma y limón, Soda, Hielo picado, decoración: ramo de menta, Cristalería: vaso ronero'
     },
     {
       title: 'Cuba Libre',
-      icon: 'assets/ic_havana.png',
-      thumb: 'assets/img_thumb-9.jpg',
-      url: 'assets/img_recipes-9.jpg',
+      icon: '../assets/ic_havana.png',
+      thumb: '../assets/img_thumb-9.jpg',
+      url: '../assets/img_recipes-9.jpg',
       description: '1/3 de ron Havana Club Especial, 2/3 de bebida cola, Hielo, Decoración: 1 Rodaja de naranja, Cristalería: Vaso ronero'
     },
     {
       title: 'Jameson Ginger & Lime',
-      icon: 'assets/ic_jameson.png',
-      thumb: 'assets/img_thumb-10.jpg',
-      url: 'assets/img_recipes-10.jpg',
+      icon: '../assets/ic_jameson.png',
+      thumb: '../assets/img_thumb-10.jpg',
+      url: '../assets/img_recipes-10.jpg',
       description: '1/3 de Jameson, 2/3 de ginger Ale, Decoración: gajo de limón sutil, Cristalería: Vaso largo'
     },
     {
       title: 'SUNRISE TEQUILA',
-      icon: 'assets/ic_olmeca.png',
-      thumb: 'assets/img_thumb-11.jpg',
-      url: 'assets/img_recipes-11.jpg',
+      icon: '../assets/ic_olmeca.png',
+      thumb: '../assets/img_thumb-11.jpg',
+      url: '../assets/img_recipes-11.jpg',
       description: 'Abundante hielo, 1/3 de Olmeca Blanco, 1/3 Jugo de limón, 1/3 triple sec Sal'
     },
     {
       title: 'LILLET TONIC',
-      icon: 'assets/ic_lillet.png',
-      thumb: 'assets/img_thumb-12.jpg',
-      url: 'assets/img_recipes-12.jpg',
+      icon: '../assets/ic_lillet.png',
+      thumb: '../assets/img_thumb-12.jpg',
+      url: '../assets/img_recipes-12.jpg',
       description: 'Hielo, 1/3 de Lillet, 2/3 agua tónica, Decorar con pepino y frutilla'
     },
     {
       title: 'Chivas Royal',
-      icon: 'assets/ic_chivas.png',
-      thumb: 'assets/img_thumb-13.jpg',
-      url: 'assets/img_recipes-13.jpg',
+      icon: '../assets/ic_chivas.png',
+      thumb: '../assets/img_thumb-13.jpg',
+      url: '../assets/img_recipes-13.jpg',
       description: '60 ml Chivas 12, 30 ml jarabe de goma, 30 ml Jugo de limón, 30 ml de jugo de naranja, Decoración: Rodaja de naranja, Cristalería: Copa Chivas'
     }
   ]
@@ -118,7 +118,7 @@ export const RecipesPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
-        <section className='px-5 lg:px-0 max-w-[1200px] m-auto w-screen'>
+        <section className='px-5 lg:px-0 max-w-[1200px] m-auto w-screen pb-20'>
           <h1 className='font-impact mt-[60px] lg:mt-0 lg:text-5xl text-[2.5rem] text-center text-white mb-8'>{isDesktop ? 'DESCUBRE NUESTRAS RECETAS' : 'NUESTRAS RECETAS'}</h1>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-4 lg:gap-y-6 w-full left-1/2 -translate-x-1/2 relative'>
             {

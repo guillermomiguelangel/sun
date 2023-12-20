@@ -157,10 +157,44 @@ select::-ms-expand {
     background: linear-gradient(180deg, #0090C8 0%, #FFF1E6 130%);
 }
 
-.bg-welcome {
-    background-image: url(assets/bg_wave.jpg);
+.bg-welcome .waves {
+    background-image: url(assets/bg_waves.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left center;
+    animation: 9s cubic-bezier(.05, .56, .79, .84) infinite moveWave;
+    height: 360px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes moveWave {
+    0% {
+        top: -360px;
+    }
+
+    5% {
+        top: -360px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    60% {
+        top: 0px;
+    }
+
+    100% {
+        top: -360px;
+    }
+}
+
+.bg-welcome {
+    background-image: url(assets/bg_sand-pattern.jpg);
+    background-repeat: repeat;
     background-position: center;
 }
 
@@ -174,6 +208,8 @@ select::-ms-expand {
 }
 
 .blueLayout {
+    overflow: hidden;
+
     &:before {
         content: "";
         display: block;
@@ -187,6 +223,7 @@ select::-ms-expand {
         background-image: url(assets/bg_waves-recipes.png);
         background-size: cover;
     }
+
     &:after {
         content: "";
         display: block;
@@ -212,6 +249,84 @@ nav {
     }
 }
 
+.bgPlamsTop {
+    background: url('assets/img_leaf-top-2.png'), url('assets/img_leaf-top-3.png');
+    background-size: 30%, 60%;
+    background-position: -170px -50px, -100px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 691px;
+    height: 383px;
+    background-repeat: no-repeat;
+    animation: 3s linear infinite alternate movePalmTop;
+}
+
+@keyframes movePalmTop {
+    0% {
+        background-size: 30%, 60%;
+        background-position: -170px -50px, -100px 0;
+    }
+
+    50% {
+        background-size: 31%, 61%;
+        background-position: -175px -55px, -105px -5px;
+    }
+
+    100% {
+        background-size: 30%, 60%;
+        background-position: -170px -50px, -100px 0;
+    }
+}
+
+.bgPlamsBottom {
+    background: url('assets/img_leaf-bottom-2.png'), url('assets/img_leaf-bottom-1.png'), url('assets/img_leaf-bottom-3.png');
+    background-size: 60%, 110%, contain;
+    background-position: right 30px, 0 0, center;
+    zoom: .5;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 529px;
+    height: 237px;
+    background-repeat: no-repeat;
+    animation: 3s linear infinite alternate movePalmBottom;
+}
+
+@keyframes movePalmBottom {
+    0% {
+        background-size: 60%, 110%, contain;
+        background-position: right 30px, 0 0, center;
+    }
+
+    50% {
+        background-size: 61%, 111%, contain;
+        background-position: right 35px, -5px -10px, center;
+    }
+
+    100% {
+        background-size: 60%, 110%, contain;
+        background-position: right 30px, 0 0, center;
+    }
+}
+//slider
+.swiper-pagination {
+    text-align: left;
+    padding: 0;
+    bottom: 30px !important;
+    left: 30px !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: transparent;
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white;
+}
+
 @media (min-width: 1024px) {
     .bgSandBall {
         --animate-duration: 1s;
@@ -226,6 +341,112 @@ nav {
         &:hover {
             background-color: white;
             color: #F88430;
+        }
+    }
+
+    .bgPlamsTop {
+        background: url('assets/img_leaf-top-2.png'), url('assets/img_leaf-top-1.png'), url('assets/img_leaf-top-3.png');
+        background-size: 40%, contain, contain;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 691px;
+        height: 383px;
+        background-repeat: no-repeat;
+        animation: 3s linear infinite alternate movePalmTopDesktop;
+    }
+
+    @keyframes movePalmTopDesktop {
+        0% {
+            background-size: 40%, contain, contain;
+            background-position: 0 0, 0 0, 0 0;
+        }
+
+        50% {
+            background-size: 41%, contain, contain;
+            background-position: -5px -10px, -10px -5px, -3px -6px;
+        }
+
+        100% {
+            background-size: 40%, contain, contain;
+            background-position: 0 0, 0 0, 0 0;
+        }
+    }
+
+    .bgPlamsBottom {
+        background: url('assets/img_leaf-bottom-2.png'), url('assets/img_leaf-bottom-1.png'), url('assets/img_leaf-bottom-3.png');
+        background-size: 60%, contain, contain;
+        background-position: right, 0 0, 0 0;
+        position: fixed;
+        zoom: 1;
+        bottom: 0;
+        right: 0;
+        width: 529px;
+        height: 237px;
+        background-repeat: no-repeat;
+        animation: 3s linear 1s infinite alternate movePalmBottomDesktop;
+    }
+
+    @keyframes movePalmBottomDesktop {
+        0% {
+            background-size: 60%, contain, contain;
+            background-position: right, 0 0, 0 0;
+        }
+
+        50% {
+            background-size: 61%, contain, contain;
+            background-position: right, 5px 10px, 10px 5px;
+        }
+
+        100% {
+            background-size: 60%, contain, contain;
+            background-position: right, 0 0, 0 0;
+        }
+    }
+
+    .sliderGifts .swiper-pagination {
+        display: flex;
+        flex-flow: column;
+        height: 40px;
+        justify-content: space-between;
+        left: auto !important;
+        width: auto !important;
+        top: 40px;
+        right: 40px;
+    }
+
+    .bg-welcome .waves {
+        background-image: url(assets/bg_waves.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        animation: 9s cubic-bezier(.05, .56, .79, .84) infinite moveWaveDesktop;
+        height: 600px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    @keyframes moveWaveDesktop {
+        0% {
+            top: -600;
+        }
+    
+        5% {
+            top: -600;
+        }
+    
+        50% {
+            top: 0px;
+        }
+    
+        60% {
+            top: 0px;
+        }
+    
+        100% {
+            top: -600;
         }
     }
 }
