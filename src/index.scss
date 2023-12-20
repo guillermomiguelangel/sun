@@ -161,9 +161,9 @@ select::-ms-expand {
     background-image: url(assets/bg_waves.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left bottom;
     animation: 9s cubic-bezier(.05, .56, .79, .84) infinite moveWave;
-    height: 360px;
+    height: 385px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -172,11 +172,11 @@ select::-ms-expand {
 
 @keyframes moveWave {
     0% {
-        top: -360px;
+        top: -333px;
     }
 
     5% {
-        top: -360px;
+        top: -333px;
     }
 
     50% {
@@ -188,7 +188,7 @@ select::-ms-expand {
     }
 
     100% {
-        top: -360px;
+        top: -333px;
     }
 }
 
@@ -416,25 +416,18 @@ nav {
     }
 
     .bg-welcome .waves {
-        background-image: url(assets/bg_waves.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: left center;
-        animation: 9s cubic-bezier(.05, .56, .79, .84) infinite moveWaveDesktop;
         height: 600px;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        background-size: contain;
+        animation: 9s cubic-bezier(.05, .56, .79, .84) infinite moveWaveDesktop;
     }
-    
+
     @keyframes moveWaveDesktop {
         0% {
-            top: -600;
+            top: -333px;
         }
     
         5% {
-            top: -600;
+            top: -333px;
         }
     
         50% {
@@ -446,7 +439,7 @@ nav {
         }
     
         100% {
-            top: -600;
+            top: -333px;
         }
     }
 }
