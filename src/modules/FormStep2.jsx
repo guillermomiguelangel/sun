@@ -34,7 +34,7 @@ export const FormStep2 = ({ handleSteps }) => {
 
   return (
     <>
-      <div className='step2 pt-[156px] lg:pt-[120px] px-4 lg:px-0 lg:-mt-2 lg:overflow-auto lg:h-[calc(100vh_-_1.75rem)]'>
+      <div className='step2 pt-[156px] lg:pr-10 lg:pl-20 lg:pt-[120px] px-4 lg:px-0 lg:-mt-2 lg:overflow-auto lg:h-[calc(100vh_-_1.75rem)]'>
         <button className='flex items-center justify-center w-auto bg-transparent text-white' onClick={() => handleNextStep(1)}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M19 12L5 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -43,7 +43,7 @@ export const FormStep2 = ({ handleSteps }) => {
           <span className='text-sm font-normal inline-block ml-1'>VOLVER</span>
         </button>
         <form className='text-white' onSubmit={handleSubmit}>
-          <h1 className='uppercase text-[2.5rem] lg:text-4xl font-impact text-center leading-[3rem] mt-5 lg:text-left lg:mt-0'>Completa el formulario</h1>
+          <h1 className='uppercase text-[2.5rem] lg:text-4xl font-impact font-normal text-center leading-[3rem] mt-5 lg:text-left lg:mt-0'>Completa el formulario</h1>
           <div className='space-y-11 lg:space-y-10 mt-10 w-full'>
             <div className='flex flex-col lg:flex-row lg:items-center lg:space-y-0 lg:space-x-10 space-y-10'>
               <input

@@ -54,23 +54,14 @@ input::placeholder {
     letter-spacing: 0.05rem;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 3px;
+[role*="dialog"] {
+    border: none!important;
 }
 
-/* Track */
-::-webkit-scrollbar-track:hover {
-    background: #00000020;
-    cursor: pointer;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #00000030;
-    cursor: pointer;
-}
-
+.ReactModal__Overlay {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .8)!important;
+};
 button {
     height: 3rem;
     width: 10.6rem;

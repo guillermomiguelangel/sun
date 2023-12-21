@@ -21,7 +21,7 @@ export const GiftsPage = () => {
         <div className="relative sliderGifts">
           <div className="text-center text-white lg:max-w-[1200px] mx-auto mb-8">
             <h2 className="lg:text-base text-sm tracking-[0.15rem] uppercase mt-6 lg:mt-0">CONOCE LOS PREMIOS</h2>
-            <h1 className="font-impact lg:text-5xl text-[2.5rem] uppercase lg:mt-4 lg:mb-6 mt-3 mb-4">un viaje para 4 personas</h1>
+            <h1 className="font-impact font-normal lg:text-5xl text-[2.5rem] uppercase lg:mt-4 lg:mb-6 mt-3 mb-4">un viaje para 4 personas</h1>
             <h3 className="lg:text-xl text-base lg:max-w-[85%] mx-auto mb-7 px-5 lg:px-0">Te sorprendemos con un viaje de un fin de semana a la playa, recibe un kit de productos de bienvenida, hospédate en un cómodo hotel y disfruta de una deliciosa comida para 4 personas en un restaurante de la zona.</h3>
             <Slider>
               <SwiperSlide>

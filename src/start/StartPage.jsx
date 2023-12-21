@@ -40,8 +40,8 @@ export const StartPage = () => {
         </div>
         <section className="bg-white bg-opacity-40 lg:min-w-[800px] lg:max-w-[800px] lg:px-16 px-7 lg:pb-4 pb-8 animate__animated animate__fadeIn">
           <img src={icLogo} alt="Logo Sun Drinks" className="w-[12.625rem] inline-block mt-6 animate__animated animate__pulse" />
-          <h1 className="font-impact text-white text-[2rem] mt-8 tracking-[0.1rem]">¡BIENVENIDOS!</h1>
-          <h2 className="font-impact text-white text-xl mt-8 tracking-[0.0625rem]">INGRESA TU AÑO DE NACIMIENTO:</h2>
+          <h1 className="font-impact font-normal text-white text-[2rem] mt-8 tracking-[0.1rem]">¡BIENVENIDOS!</h1>
+          <h2 className="font-impact font-normal text-white text-xl mt-8 tracking-[0.0625rem]">INGRESA TU AÑO DE NACIMIENTO:</h2>
           {
             state.error === null && <form onSubmit={handleSubmit} >
               <input

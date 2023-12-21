@@ -44,12 +44,7 @@ export const WelcomeLayout = () => {
 						<img src={icBottles} alt="Logo Sun Drinks" className="animate__animated animate__fadeInUp lg:max-w-[532px] w-full inline-block relative top-6" />
 					</figure>
 				</div> : <Link to={'/welcome'}> <img src={icLogo} alt="Logo Sun Drinks" className="z-10 w-[11.7rem] lg:w-[25rem] inline-block absolute top-6 lg:mt-12 left-4 lg:left-0" /></Link>}
-				<div className={cn('overflow-hidden bg-orange relative lg:w-[calc(100%_-_626px)] lg:h-full w-full',
-					{
-						'lg:pl-20 lg:pr-16': state.step === 1,
-						'lg:pr-10 lg:pl-20': state.step === 2,
-						'lg:pr-0 lg:pl-0': state.step === 3
-					})}>
+				<div className={cn('overflow-hidden bg-orange relative lg:w-[calc(100%_-_626px)] lg:h-full w-full')}>
 					<motion.div
 						key={state.step}
 						initial={{ opacity: 0, y: -100 }}
